@@ -1,0 +1,81 @@
+    1  ping google.com
+    2  init 0
+    3  hostname puppet
+    4  vi /etc/hosts 
+    5  cat /etc/hostname
+    6  vi /etc/hostname
+    7  vi /etc/hosts 
+    8  exec bash
+    9  ssh node1
+   10  ping 52.10.130.237
+   11  dhclient -v
+   12   rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+   13  yum update
+   14  ps -ef |grep yum
+   15  date
+   16  ps -ef |grep yum
+   17  yum --help
+   18  ps -ef |grep yum
+   19  kill 5691
+   20  ps -ef |grep yum
+   21  yum update
+   22  systemctl stop firewalld.service 
+   23  systemctl disable firewalld.service 
+   24  yum install puppetserver
+   25  systemctl status puppetserver
+   26  systemctl status puppet
+   27  cd /etc/sysconfig/
+   28  ls
+   29  ls -ld puppetserver 
+   30  cat puppetserver 
+   31  vi puppetserver 
+   32  cat puppetserver 
+   33  systemctl start puppetserver
+   34  systemctl enable puppetserver
+   35  systemctl start puppetserver
+   36  systemctl status puppetserver
+   95  pwd
+   96  vi .bashrc 
+   97  ls
+   98  vi .bash_profile 
+   99  pwd
+  100  cd /opt/puppetlabs/
+  101  ls
+  159  systemctl status puppetserver
+  160  pwd
+  161  ls -la
+  162  pwd
+  163  cd ../puppet
+  164  ls
+  165  ls -la
+  166  puppet help
+  167  puppet cert 
+  168  puppet cert list -a
+  201  puppet cert sign -i -y node1
+  202  puppet cert list -a
+  203  puppet cert sign -i -y node2
+  204  puppet cert list -a
+  205* puppet cert 
+  206  puppet cert revoke node2
+  211  puppet cert list -a
+  212  puppet cert clean node2
+  213  puppet cert generate node2
+  214  puppet cert list -a
+  243  vi site.pp 
+  244  echo "This is to test" >> /var/tmp/motd
+  245  vi site.pp 
+  255  ls -la
+  256  git config -global user.name vsri9999
+  257  git config --global user.name vsri9999
+  258  git config --global user.email srirama.vaitala@gmail.com
+  275  cd ..
+  276  ls -la
+  277  git add *
+  279  ls -la
+  280  git commit -m "first commit"
+  284  git remote add origin https://github.com/vsri9999/puppetlabs.git
+  285  git push origin master
+  286  git remote 
+  287  git remote --help
+  288  git remote remove origion
+  289  git remote 
