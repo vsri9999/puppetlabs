@@ -79,3 +79,5 @@
   287  git remote --help
   288  git remote remove origion
   289  git remote 
+  git commit -m "second commit"
+git psuh origin master
