@@ -5,6 +5,12 @@ node 'node1' {
        include users::user22
        include group::groups
        include webservice::package
+       class { 'variables::testvar' :
+		parameter => 'Variable passed from Site',
+		number => 99,
+ 	}
+	include var2module::myvariable
+	include  var2module1::myvariable2
 }
 node default {
 }
@@ -17,5 +23,5 @@ file{ 'motd':
 file{'status':
      ensure => present,
      path => '/root/first.txt',
-     content => "Hardware : ${facts['os']['hardware']}" ,
+     content => "Hardware : ${facts['system_uptime']['uptime']}" ,
 }
